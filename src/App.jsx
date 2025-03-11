@@ -1,23 +1,18 @@
 import './App.css'
-
-//헤더 컴포넌트(컴포넌트의 이름 앞글자를 대문자로 넣어서 암묵적으로 컴포넌트로 표시)
-//App컴포넌트의 자식 컴포넌트
-function Header(){
-  return(
-    <header>
-      <h1>header</h1>
-    </header>
-  );
-};
+//Header 컴포넌트를 컴포넌츠 폴더에 따로 넣어놓았고 그 컴포넌츠를 임포트하여 붙여넣고있음
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Main from './components/main'
 
 function App() {
   return (
+    // 컴포넌트의 집합
     <>
-    {/* 이렇게 header태그를 해주어야 화면에 렌더링이됨 */}
-    <Header></Header>
-    <h1>안녕 리액트!</h1>
+      <Header></Header>
+      <Main></Main>
+      <Footer></Footer>
     </>
   )
 }
 
-export default App
+export default App;
