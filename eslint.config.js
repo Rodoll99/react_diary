@@ -24,21 +24,19 @@ export default [
       react: { version: "18.3" }, // React 버전 감지
     },
     plugins: {
-      i18n,
+      i18n, // 한글
       react, // React ESLint 플러그인
       "react-hooks": reactHooks, // React Hooks 플러그인
       "react-refresh": reactRefresh, // React Fast Refresh 플러그인
       prettier: prettierPlugin, // Prettier 플러그인 추가
     },
     rules: {
-      
       ...js.configs.recommended.rules, // ESLint 추천 규칙 적용
       ...react.configs.recommended.rules, // React 추천 규칙 적용
       ...react.configs["jsx-runtime"].rules, // JSX 런타임 관련 규칙
       ...reactHooks.configs.recommended.rules, // React Hooks 추천 규칙 적용
       "react/jsx-no-target-blank": "off", // target="_blank" 보안 경고 비활성화
-      
-      "i18n/locale": ["error", "ko"] ,// 오류 메시지를 한국어로 출력
+      "i18n/locale": ["error", "ko"], // 오류 메시지를 한국어로 출력
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },
