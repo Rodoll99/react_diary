@@ -1,30 +1,28 @@
 import './App.css'
-//Header 컴포넌트를 컴포넌츠 폴더에 따로 넣어놓았고 그 컴포넌츠를 임포트하여 붙여넣고있음
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Main from './components/Main'
-import Button from './components/button'
+import { useState } from 'react';
 
 function App() {
-
-  const buttonProps ={
-    text : "메일" ,
-    color : "red" ,
-    a : 1 ,
-    b : 2,
-    c : 3,
-  };
+  // 일반적 함수 
+  // [A,B] = UseState(기본값)
+  // A는 변수 설정 , B는 A의 상태를 변화시킬 함수 설정
+  const [count, setCount] = useState(0);
+  const [light , setLight] = useState("OFF")
   return (
     // 컴포넌트의 집합
     <>
-      {/* <Button text={"메일"} color ="red"> </Button> */}
-      {/* 줄에 길게 쓸 필요없이 buttonProps를 따로 만들어 값을 넣어주어 표현 가능 */}
-      <Button {...buttonProps}></Button>
-      <Button text={"카페"}> </Button>
-      <Button text={"블로그"}>
-        {/* 값을 넣으면 children 으로 자동으로 값이 저장되어있음 */}
-        <Header></Header>
-         </Button>
+    <div>
+    <h1>{count}</h1>
+      <button onClick= {()=>{
+        setCount(count + 1)
+      }}> + </button>
+    </div>
+    <div>
+      <h1>{light}</h1>
+      <button onClick={() => {
+        setLight(light == "OFF" ? "ON" : "OFF")
+      }}> {light === "ON" ? "끄기" : "켜기"} </button>
+    </div>
+     
     </>
   )
 }
