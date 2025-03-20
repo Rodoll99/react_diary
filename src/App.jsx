@@ -19,6 +19,7 @@ function App() {
     // 컴포넌트의 집합
     <>
     <div>
+      
       {/* 컴포넌트에 props 전달 */}
     <Bulbe light={light}></Bulbe>
     <h1>{count}</h1>
