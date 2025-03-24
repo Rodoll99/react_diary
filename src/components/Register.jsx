@@ -34,7 +34,7 @@ const Register = () => {
             <div>
                 {/* select , option */}
                <select value={country} onChange={onChangeCountry}>
-                    <option>
+                    <option value="kr">
                         한국
                     </option>
                     <option>
@@ -44,6 +44,7 @@ const Register = () => {
                         미국
                     </option>
                </select>
+               {country}
             </div>
         </div>
       
