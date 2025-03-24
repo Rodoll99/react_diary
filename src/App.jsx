@@ -1,8 +1,6 @@
 import "./App.css";
-import { useState } from "react";
+import Register from "./components/Register";
 
-import Counter from "./components/Counter";
-import Bulbe from "./components/bulbe";
 function App() {
   // 일반적 함수
   // [A,B] = UseState(기본값)
@@ -12,8 +10,7 @@ function App() {
   return (
     // 호출된 컴포넌트의 집합
     <>
-      <Counter />
-      <Bulbe />
+    <Register></Register>
     </>
   );
 }
