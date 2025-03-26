@@ -10,6 +10,7 @@ const Register = () => {
     const [name , setName] = useState("이름");
     const [birth , setBirth] = useState("")
     const [country , setCountry] =useState("")
+    const [bio , setBio] = useState("")
     // 매개변수(e)를 넘김
     const onChangeName = (e) => {
         // 매개변수의 target.value 에 입력된값이 저장되기때문
@@ -21,6 +22,9 @@ const Register = () => {
     const onChangeCountry = (e) => {
         setCountry(e.target.value);
     } 
+    const onChangeBio = (e)=>{
+        setBio(e.target.value);
+    }
     return (
         <div>
             <div>
@@ -37,14 +41,19 @@ const Register = () => {
                     <option value="kr">
                         한국
                     </option>
-                    <option>
+                    <option value="CH">
                         중국
                     </option>
-                    <option>
+                    <option value="US">
                         미국
                     </option>
                </select>
-               {country}
+            </div>
+            <div>
+                {/* textarea = 글자입력 폼 */}
+                <textarea onChange={onChangeBio} value={bio}>
+                </textarea>
+                {bio}
             </div>
         </div>
       
