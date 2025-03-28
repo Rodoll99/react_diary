@@ -48,6 +48,7 @@ const Register = () => {
                         미국
                     </option>
                </select>
+               
             </div>
             <div>
                 {/* textarea = 글자입력 폼 */}
