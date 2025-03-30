@@ -38,7 +38,7 @@ const Register = () => {
             <div>
                 {/* select , option */}
                <select value={country} onChange={onChangeCountry}>
-                    <option value="kr">
+                    <option value="KR">
                         한국
                     </option>
                     <option value="CH">
@@ -48,7 +48,6 @@ const Register = () => {
                         미국
                     </option>
                </select>
-               
             </div>
             <div>
                 {/* textarea = 글자입력 폼 */}
