@@ -22,11 +22,11 @@ const Register = () => {
     //useRef 는 값이 변경되어도 리렌더링 되지않는다 
     const countRef = useRef(0)
     const inputRef = useRef();
-    console.log(input)
+    
     // 매개변수(e)를 넘김
     const onChange = (e) => {
         countRef.current++;
-        console.log(countRef.current)
+       
         setInput({
             ...input,
             [e.target.name]:e.target.value,
@@ -34,9 +34,10 @@ const Register = () => {
     }
     
     const onSubmit=() =>{
+        
         if(input.name === ""){
             //이름을 입력하는 DOM 요소에 포커스
-            
+            inputRef.current.focus();
         }
     }
     // const onChangeName = (e) => {
