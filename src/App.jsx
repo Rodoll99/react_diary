@@ -1,5 +1,6 @@
 import "./App.css";
 import Register from "./components/Register";
+import HookExam from "./components/HookExam";
 
 function App() {
   // 일반적 함수
@@ -10,7 +11,7 @@ function App() {
   return (
     // 호출된 컴포넌트의 집합
     <>
-    <Register></Register>
+    <HookExam></HookExam>
     </>
   );
 }
